@@ -2,17 +2,18 @@
 #include <string.h>
 
 int main(int argc, char *argv[]){
-        if(argc != 5){
-            printf("Arg");
+        if(argc != 9){
+            printf("Arg\n");
             return 1;
         }
 
-        int coord[8];
+        int xcoord[4];
+        int ycoord[4];
 
-        for(int i = 0; *argv[i] != '\0'; i++){
-            coord[i] = *argv[i + 1] - 48;
+        for(int i = 1; argv[i+4] != NULL; i++){
+            xcoord[i-1] = *argv[i] - 48;
+            ycoord[i-1] = *argv[i+4] - 48;
+            printf("(%d,%d)\n", xcoord[i-1], ycoord[i-1]);
+
         }
-        
-        printf("(%d,%d)", coord[1], coord[2]);
-    
 }

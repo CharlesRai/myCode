@@ -10,7 +10,7 @@ int main(int argc, char *argv[]){
         int coord[8];
 
         for(int i = 0; *argv[i] != '\0'; i++){
-            coord[i] = *argv[i] - 48;
+            coord[i] = *argv[i + 1] - 48;
         }
         
         printf("(%d,%d)", coord[1], coord[2]);
